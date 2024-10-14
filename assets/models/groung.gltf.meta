@@ -1,0 +1,57 @@
+{
+  "ver": "2.3.4",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "d62cdb82-7fab-4926-a727-405ec23c9495",
+  "files": [],
+  "subMetas": {
+    "b9bff": {
+      "importer": "gltf-mesh",
+      "uuid": "d62cdb82-7fab-4926-a727-405ec23c9495@b9bff",
+      "displayName": "",
+      "id": "b9bff",
+      "name": "Groung.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fa99c": {
+      "importer": "gltf-scene",
+      "uuid": "d62cdb82-7fab-4926-a727-405ec23c9495@fa99c",
+      "displayName": "",
+      "id": "fa99c",
+      "name": "groung.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "d62cdb82-7fab-4926-a727-405ec23c9495@fa99c",
+    "assetFinder": {
+      "meshes": [
+        "d62cdb82-7fab-4926-a727-405ec23c9495@b9bff"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "d62cdb82-7fab-4926-a727-405ec23c9495@fa99c"
+      ]
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "ver": "2.3.4",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb"
+  ],
+  "subMetas": {
+    "45368": {
+      "importer": "gltf-mesh",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@45368",
+      "displayName": "",
+      "id": "45368",
+      "name": "kate_gameplay_boots_geo.001.mesh",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cd778": {
+      "importer": "gltf-mesh",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@cd778",
+      "displayName": "",
+      "id": "cd778",
+      "name": "kate_body_geo.002.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1d098": {
+      "importer": "gltf-mesh",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@1d098",
+      "displayName": "",
+      "id": "1d098",
+      "name": "kate_body_geo.003.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6ceb4": {
+      "importer": "gltf-mesh",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@6ceb4",
+      "displayName": "",
+      "id": "6ceb4",
+      "name": "kate_gameplay_pants_geo.001.mesh",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "724d1": {
+      "importer": "gltf-mesh",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@724d1",
+      "displayName": "",
+      "id": "724d1",
+      "name": "kate_gameplay_shirt_geo.001.mesh",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "76e64": {
+      "importer": "gltf-mesh",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@76e64",
+      "displayName": "",
+      "id": "76e64",
+      "name": "kate_gameplay_shirt_kate_gameplay_scarf_geo.001.mesh",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2b467": {
+      "importer": "gltf-mesh",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@2b467",
+      "displayName": "",
+      "id": "2b467",
+      "name": "kate_hair_geo.002.mesh",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fd5e7": {
+      "importer": "gltf-animation",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@fd5e7",
+      "displayName": "",
+      "id": "fd5e7",
+      "name": "kate_idle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.4666666984558105
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "954af": {
+      "importer": "gltf-animation",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@954af",
+      "displayName": "",
+      "id": "954af",
+      "name": "kate_run.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7833333611488342
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "d6a7d": {
+      "importer": "gltf-skeleton",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@d6a7d",
+      "displayName": "",
+      "id": "d6a7d",
+      "name": "kate_rig_ue.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 343
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "41fdd": {
+      "importer": "gltf-scene",
+      "uuid": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@41fdd",
+      "displayName": "",
+      "id": "41fdd",
+      "name": "kate.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "allowMeshDataAccess": true,
+    "animationImportSettings": [
+      {
+        "name": "kate_idle",
+        "duration": 1.4666666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "kate_idle",
+            "from": 0,
+            "to": 1.4666666984558105,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "kate_run",
+        "duration": 0.7833333611488342,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "kate_run",
+            "from": 0,
+            "to": 0.7833333611488342,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@41fdd",
+    "assetFinder": {
+      "meshes": [
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@cd778",
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@1d098",
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@45368",
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@6ceb4",
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@724d1",
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@76e64",
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@2b467"
+      ],
+      "skeletons": [
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@d6a7d"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "0076ba9d-c9bc-4d1b-839b-dcaa0b224fad@41fdd"
+      ]
+    }
+  }
+}

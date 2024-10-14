@@ -1,0 +1,59 @@
+{
+  "ver": "2.3.4",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "98d2f9bd-5a43-4aa2-83d9-51e70e9182ec",
+  "files": [],
+  "subMetas": {
+    "55646": {
+      "importer": "gltf-mesh",
+      "uuid": "98d2f9bd-5a43-4aa2-83d9-51e70e9182ec@55646",
+      "displayName": "",
+      "id": "55646",
+      "name": "SM_Orange.003.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "09d3f": {
+      "importer": "gltf-scene",
+      "uuid": "98d2f9bd-5a43-4aa2-83d9-51e70e9182ec@09d3f",
+      "displayName": "",
+      "id": "09d3f",
+      "name": "orange.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "allowMeshDataAccess": true,
+    "redirect": "98d2f9bd-5a43-4aa2-83d9-51e70e9182ec@09d3f",
+    "assetFinder": {
+      "meshes": [
+        "98d2f9bd-5a43-4aa2-83d9-51e70e9182ec@55646"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "98d2f9bd-5a43-4aa2-83d9-51e70e9182ec@09d3f"
+      ]
+    }
+  }
+}

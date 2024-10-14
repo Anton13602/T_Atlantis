@@ -1,0 +1,26 @@
+{
+  "__version__": "1.0.4",
+  "custom_joint_texture_layouts": [],
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "GROUNG"
+      },
+      {
+        "index": 2,
+        "name": "FRUITS"
+      },
+      {
+        "index": 3,
+        "name": "CHARACTER"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 9,
+      "1": 4,
+      "2": 14,
+      "3": 13
+    }
+  }
+}
