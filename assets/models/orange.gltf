@@ -53,45 +53,45 @@
     "accessors" : [
         {
             "componentType" : 5126,
-            "count" : 170,
+            "count" : 134,
             "max" : [
                 0.19986380636692047,
-                0.17200477421283722,
+                0.16560040414333344,
                 0.19986380636692047
             ],
             "min" : [
                 -0.19986377656459808,
-                -0.16934804618358612,
+                -0.16307751834392548,
                 -0.19986377656459808
             ],
             "type" : "VEC3"
         },
         {
             "componentType" : 5126,
-            "count" : 170,
+            "count" : 134,
             "type" : "VEC3"
         },
         {
             "componentType" : 5126,
-            "count" : 170,
+            "count" : 134,
             "type" : "VEC2"
         },
         {
             "componentType" : 5123,
-            "count" : 768,
+            "count" : 564,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 1830,
+            "byteLength" : 1538,
             "byteOffset" : 0
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1832,
+            "byteLength" : 1540,
             "uri" : "orange.bin"
         }
     ]

@@ -3,8 +3,8 @@
   "_name": "default-physics-material",
   "_objFlags": 0,
   "_native": "",
-  "_friction": 5,
+  "_friction": 1,
   "_rollingFriction": 0.1,
   "_spinningFriction": 0.1,
-  "_restitution": 0.5
+  "_restitution": 0.1
 }

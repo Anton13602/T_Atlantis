@@ -98,7 +98,6 @@ export class FruitsCollect extends Component {
 			const xRotateCoeff = Math.random();
 			const zRotateCoeff = Math.random();
 
-
 			tween(last)
 				.delay(i * 0.05)
 				.to(0.001, {}, {

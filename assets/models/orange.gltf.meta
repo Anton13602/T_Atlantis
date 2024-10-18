@@ -54,6 +54,20 @@
       "scenes": [
         "98d2f9bd-5a43-4aa2-83d9-51e70e9182ec@09d3f"
       ]
-    }
+    },
+    "meshOptimizer": {
+      "enable": false,
+      "algorithm": "simplify",
+      "simplifyOptions": {
+        "maxIterationCount": 200,
+        "agressiveness": 20,
+        "preserveUVSeamEdges": false,
+        "preserveBorderEdges": false,
+        "preserveUVFoldoverEdges": false,
+        "targetRatio": 1
+      }
+    },
+    "disableMeshSplit": true,
+    "skipValidation": true
   }
 }

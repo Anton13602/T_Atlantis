@@ -1,13 +1,27 @@
-import { _decorator, Component, Node, Prefab, RigidBody, SphereCollider, Vec3, tween } from 'cc';
+import {
+	_decorator,
+	Component,
+	Node,
+	Prefab,
+	RigidBody,
+	SphereCollider,
+	Vec2,
+	Vec3,
+	tween,
+} from 'cc';
 import { Pool } from 'db://assets/scripts/Poll';
 import { gameEventTarget } from 'db://assets/scripts/plugins/GameEventTarget';
 import { GameEvent } from 'db://assets/scripts/enums/GameEvent';
+import { Quadtree } from 'db://assets/scripts/Qadtree';
+import { getBoundSize } from 'db://assets/scripts/utils/getBoundSize';
 
 const { ccclass, property } = _decorator;
+
 
 @ccclass('FruitsGenerator')
 export class FruitsGenerator extends Component {
 	private _timer = 0;
+	private _timerUpdateTree = 0;
 
 	@property
 	perRow: number = 20;
@@ -31,9 +45,21 @@ export class FruitsGenerator extends Component {
 	playerNode: Node = null;
 
 	private _pool: Pool = null;
+	private _arr: Node[] = [];
+	public _quadtree: Quadtree;
 
 	onLoad() {
+		const points: Vec3[] = [
+			new Vec3(0, 0, -11),
+			new Vec3(14, 0, -11),
+			new Vec3(14, 0, 2.5),
+			new Vec3(0, 0, 2.5),
+		];
+
+		const bounds = getBoundSize(points);
+
 		this._pool = new Pool(this.fruitPrefab, this.perRow ** 2 * this.rows);
+		this._quadtree = new Quadtree(bounds.x, bounds.y, bounds.width, bounds.height);
 
 		this.startGeneratingOranges();
 	}
@@ -68,10 +94,10 @@ export class FruitsGenerator extends Component {
 		fruit.active = this.active;
 		if (fruit) {
 			this.node.addChild(fruit);
-
 			fruit.setPosition(new Vec3(x, y, z));
-
 			fruit.eulerAngles = new Vec3(Math.random() * 180, Math.random() * 90, Math.random() * 180);
+			this._quadtree.insert(fruit);
+			this._arr.push(fruit);
 		}
 	}
 
@@ -96,45 +122,45 @@ export class FruitsGenerator extends Component {
 		});
 	}
 
-	destroyFruit(node: Node) {
-		this._pool.release(node);
-	}
-
 	update(dt: number) {
 		if (!this.playerNode) {
 			return;
 		}
 
 		this._timer += dt;
-		if (this._timer > 0.2) {
-			this._timer = 0;
+		this._timerUpdateTree += dt;
+		if (this._timer < 0.1) {
+			return;
+		}
+		this._timer = 0;
+		
+		if (this._timerUpdateTree > 1) {
+			this._quadtree.update();
+			this._timerUpdateTree = 0;
 		}
 
-		this.node.children.forEach((child) => {
-			const playerPosXZ = new Vec3(this.playerNode.worldPosition.x, 0, this.playerNode.worldPosition.z);
-			const childPosXZ = new Vec3(child.children[0].worldPosition.x, 0, child.children[0].worldPosition.z);
-			const distance = Vec3.distance(playerPosXZ, childPosXZ);
+		const playerPos2D = new Vec2(this.playerNode.worldPosition.x, this.playerNode.worldPosition.z);
+		const radiusSquared = 2;
 
-			const rigidBody = child.getComponentInChildren(RigidBody);
-			const collider = child.getComponentInChildren(SphereCollider);
+		const nearbyNodes = this._quadtree.queryCircle(playerPos2D, Math.sqrt(radiusSquared));
 
-			if (distance <= 1.) {
-				if (rigidBody) {
-					const f = this.playerNode.forward.multiplyScalar(-25);
-					child['liveTime'] = 1;
-					rigidBody.enabled = true; // Включаем физику
+		nearbyNodes.forEach((childNode: Node) => {
+			const parentPos2D = new Vec2(childNode.worldPosition.x, childNode.worldPosition.z);
+			const distanceSquared = Vec2.squaredDistance(playerPos2D, parentPos2D);
+
+			const rigidBody = childNode.getComponent(RigidBody);
+			const collider = childNode.getComponent(SphereCollider);
+
+			if (distanceSquared < 1) {
+				if (rigidBody && !rigidBody.enabled) {
+					const force = this.playerNode.forward.multiplyScalar(-25);
+					rigidBody.enabled = true;
 					collider.enabled = true;
-
-					rigidBody.applyForce(f);
-				}
-			} else {
-				if (rigidBody && rigidBody.enabled) {
-					child['liveTime'] -= dt;
-				}
-				if (rigidBody && rigidBody.enabled && child['liveTime'] < 0) {
-					rigidBody.enabled = false; // Отключаем физику
-					collider.enabled = false;
-					child['liveTime'] = 1;
+					rigidBody.applyForce(force);
+					this.scheduleOnce(() => {
+						rigidBody.enabled = false;
+						collider.enabled = false;
+					}, 1);
 				}
 			}
 		});
